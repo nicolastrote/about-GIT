@@ -48,11 +48,13 @@ réponse
 ```
 "modified"
 ```
+
 ## CONNAITRE L'HISTORIQUE DES COMMITS
 Connaitre toutes les modifications :
 ```
 $ git log
 ```
+
 ## ANNEXE: SE POSITIONNER SUR UN COMMIT DONNE'
 ```
 $ git log
@@ -65,6 +67,7 @@ revenir sur le dernier commit de la branche principale
 ```
 $ git checkout master
 ```
+
 ## TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
 Avec l'icon "+" créer un répertoire au même nom que votre projet (ie: conkyForGnome3 )
@@ -80,5 +83,19 @@ Si cela ne marche pas, on peut forcer le push (dans le cas où vous aviez déjà
 ```
 $ git push -f origin master
 ```
+
+## RECUPERER LES DONNEES EN LOCAL DE GITHUB
+Git pull does a git fetch followed by a git merge
+```
+$ git pull
+```
+A git pull is what you would do to bring a local branch up-to-date with its remote version, while also updating your other remote-tracking branches.
+
+## METTRE A JOUR SES BRANCHES
+You can do a git fetch at any time to update your remote-tracking branches under refs/remotes/<remote>/
+```
+$ git fetch
+```
+
 ## CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
