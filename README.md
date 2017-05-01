@@ -1,7 +1,7 @@
-============= GIT et GITHUB
+# GIT et GITHUB
 Notes personnelles pour utiliser Git et GitHub
 
-# INSTALLATION
+## INSTALLATION
 source: http://git-scm.com/downloads ils conseillent :
 ```
 $ apt-get install git
@@ -30,7 +30,7 @@ Once you've done this, you can check and see if it worked:
 $ git
 ```
 
-# RÉALISER UN COMMIT
+## RÉALISER UN COMMIT
 ```
 $ git init
 $ nano exemple.py
@@ -48,12 +48,12 @@ réponse
 ```
 "modified"
 ```
-# CONNAITRE L'HISTORIQUE DES COMMITS
+## CONNAITRE L'HISTORIQUE DES COMMITS
 Connaitre toutes les modifications :
 ```
 $ git log
 ```
-# ANNEXE: SE POSITIONNER SUR UN COMMIT DONNE'
+## ANNEXE: SE POSITIONNER SUR UN COMMIT DONNE'
 ```
 $ git log
 ```
@@ -65,7 +65,7 @@ revenir sur le dernier commit de la branche principale
 ```
 $ git checkout master
 ```
-# TRAVAILLER AVEC GITHUB
+## TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
 Avec l'icon "+" créer un répertoire au même nom que votre projet (ie: conkyForGnome3 )
 Créer le lien entre le git local et github :
@@ -80,5 +80,5 @@ Si cela ne marche pas, on peut forcer le push (dans le cas où vous aviez déjà
 ```
 $ git push -f origin master
 ```
-# CHEAT SHEET
+## CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
