@@ -1,4 +1,4 @@
-# tuto_github
+= GIT et GITHUB
 Notes personnelles pour utiliser Git et GitHub
 
 # INSTALLATION
