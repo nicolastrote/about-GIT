@@ -55,7 +55,7 @@ Connaitre toutes les modifications :
 $ git log
 ```
 
-## ANNEXE: SE POSITIONNER SUR UN COMMIT DONNE'
+## SE POSITIONNER SUR UN COMMIT DONNE'
 ```
 $ git log
 ```
