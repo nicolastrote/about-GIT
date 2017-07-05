@@ -97,5 +97,10 @@ You can do a git fetch at any time to update your remote-tracking branches under
 $ git fetch
 ```
 
+## VIDER L HISTORIQUE DES COMMANDES
+```
+$ history -c
+```
+
 ## CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
