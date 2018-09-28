@@ -1,5 +1,5 @@
 # GIT et GITHUB
-Notes personnelles pour utiliser Git et GitHub
+Notes personnelles pour utiliser Git, GitHub et GitLab
 
 ## INSTALLATION
 source: http://git-scm.com/downloads ils conseillent :
