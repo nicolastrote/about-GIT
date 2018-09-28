@@ -102,5 +102,25 @@ $ git fetch
 $ history -c
 ```
 
+## TRAVAILLER AVEC GITLAB
+Aller sur https://gitlab.com, se créer un compte (https://gitlab.com/nicolastrote), enregistrer sa clef publique SSH.
+
+Cloner un repository :
+une fois cloner, le remote est en place.
+```
+$ git clone git@gitlab.com:monrepository/lenomdelabrancheMaster.git
+```
+Créer une branche sur gitLab par exemple, puis faire un checkout dessus :
+```
+$ git checkout nom_de_la_branche_uniquement
+```
+Puller et Pousser son code dessus :
+```
+$ git pull
+$ git push   
+$ git push origin nom_de_la_branche_uniquement
+```
+Le git merge sera fait sur GitLab qui permet de voir les differences, rajouter des codes reviewers, des imprim-ecrans...
+
 ## CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
