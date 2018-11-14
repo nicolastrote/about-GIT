@@ -67,11 +67,39 @@ revenir sur le dernier commit de la branche principale
 ```
 $ git checkout master
 ```
+# Pour ignorer des fichiers
+ * créer un fichier .gitignore avec le nom des fichiers ou dossiers à ne pas suivre
+ 
+ * Si un fichier ne suit pas les règles locales, car sur le projet il est suivi il faut re-initier les règles locales avec la commande :
+ ```
+  $ git rm --cached docker-compose.yml
+ ```
 
-## TRAVAILLER AVEC GITHUB
+## TRAVAILLER AVEC GITLAB
+
+# TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
 Avec l'icon "+" créer un répertoire au même nom que votre projet (ie: conkyForGnome3 )
-Créer le lien entre le git local et github :
+
+## 1ere solution avec clone
+Récupérer le repository en le clonant, la partie "remote" sera enregistrée automatiquement par GIT:
+```
+$ git clone https://github.com/nicolastrote/java_spring.git
+```
+Pour la nouvelle branche il faudra la créer avec Github, puis:
+```
+$ git pull origin develop     ou master suivant le nom de la branche d'origine
+$ git branch -a               pour lister toutes les branches
+$ git checkout le-nom-de-la-nouvelle-branche
+```
+Faire le push :
+```
+$ git push
+```
+Puis faire une pull request à partir de GitHub
+
+## 2d solution avec remote
+Créer le lien entre le git local et GitHub :
 ```
 $ git remote add origin https://github.com/nicolastrote/conkyForGnome3.git
 ```
@@ -102,7 +130,7 @@ $ git fetch
 $ history -c
 ```
 
-## TRAVAILLER AVEC GITLAB
+# TRAVAILLER AVEC GITLAB
 Aller sur https://gitlab.com, se créer un compte (https://gitlab.com/nicolastrote), enregistrer sa clef publique SSH.
 
 Cloner un repository :
@@ -122,5 +150,5 @@ $ git push origin nom_de_la_branche_uniquement
 ```
 Le git merge sera fait sur GitLab qui permet de voir les differences, rajouter des codes reviewers, des imprim-ecrans...
 
-## CHEAT SHEET
+# CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
