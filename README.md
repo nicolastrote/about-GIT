@@ -75,8 +75,6 @@ $ git checkout master
   $ git rm --cached docker-compose.yml
  ```
 
-## TRAVAILLER AVEC GITLAB
-
 # TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
 Avec l'icon "+" créer un répertoire au même nom que votre projet (ie: conkyForGnome3 )
