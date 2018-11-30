@@ -80,22 +80,30 @@ $ git checkout master
  * puis rajouter par exemple :
  ```
   [alias]
-    amend = commit --amend
+    # basic
     st = status
+    df = diff
+    co = checkout
+    ci = commit
     br = branch -a
     who = shortlog -sne
-    oneline = log --pretty=oneline --abbrev-commit --graph
+    
+    # Annuler le dernier commit
+    undo = git reset --soft HEAD^
+    
+    # Éditer le dernier commit
+    amend = commit --amend
+    
+    # Editer l'état
     changes = diff --name-status
     dic = diff --cached
     diffstat = diff --stat
-    svnpull = svn rebase
-    svnpush = svn dcommit
+    
+    # historique
+    oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+    
+    # afficher changements
     lc = !git oneline ORIG_HEAD.. --stat --no-merges
-    addm = !git-ls-files -m -z | xargs -0 git-add && git status
-    addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
-    rmm = !git ls-files -d -z | xargs -0 git-rm && git status
-    mate = !git-ls-files -m -z | xargs -0 mate
-    mateall = !git-ls-files -m -o --exclude-standard -z | xargs -0 mate
  ```
  
  * la commande config permet de créer l'alias en ligne de commande
