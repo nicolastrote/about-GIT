@@ -67,14 +67,42 @@ revenir sur le dernier commit de la branche principale
 ```
 $ git checkout master
 ```
-# Pour ignorer des fichiers
+## GITIGNORE
  * créer un fichier .gitignore avec le nom des fichiers ou dossiers à ne pas suivre
  
  * Si un fichier ne suit pas les règles locales, car sur le projet il est suivi il faut re-initier les règles locales avec la commande :
  ```
   $ git rm --cached docker-compose.yml
  ```
+## ALIAS
 
+ * créer un fichier .gitconfig dans votre user (pour l'utiliser sur tous les projets)
+ * puis rajouter par exemple :
+ ```
+  [alias]
+    amend = commit --amend
+    st = status
+    br = branch -a
+    who = shortlog -sne
+    oneline = log --pretty=oneline --abbrev-commit --graph
+    changes = diff --name-status
+    dic = diff --cached
+    diffstat = diff --stat
+    svnpull = svn rebase
+    svnpush = svn dcommit
+    lc = !git oneline ORIG_HEAD.. --stat --no-merges
+    addm = !git-ls-files -m -z | xargs -0 git-add && git status
+    addu = !git-ls-files -o --exclude-standard -z | xargs -0 git-add && git status
+    rmm = !git ls-files -d -z | xargs -0 git-rm && git status
+    mate = !git-ls-files -m -z | xargs -0 mate
+    mateall = !git-ls-files -m -o --exclude-standard -z | xargs -0 mate
+ ```
+ 
+ * la commande config permet de créer l'alias en ligne de commande
+ ```
+  $ git config --global alias.st 'status'
+ ```
+ 
 # TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
 Avec l'icon "+" créer un répertoire au même nom que votre projet (ie: conkyForGnome3 )
