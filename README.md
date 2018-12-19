@@ -133,18 +133,18 @@ $ git push
 Puis faire une pull request à partir de GitHub
 
 ## 2d solution avec remote
-Créer le lien entre le git local et GitHub :
-```
-$ git remote add origin https://github.com/nicolastrote/conkyForGnome3.git
-```
-Faire le push :
-```
-$ git push origin master
-```
-Si cela ne marche pas, on peut forcer le push (dans le cas où vous aviez déjà travailler dans github, et que vous voulez écraser votre ancien projet github par celui de votre pc)
-```
-$ git push -f origin master
-```
+Cette méthode permet de pousser un projet complet sur GitHub.
+* Créer sous GitHub un projet sans licence ni .gitignore
+* localement initialiser le git
+``` git init```
+* Ajouter tous les fichiers à git
+```git add . ```
+* Faire le premier commit
+```git commit -m "first commit"```
+* Créer le lien entre git et github
+```git remote add origin https://github.com/nicolastrote/angular-fitness.git```
+* Il est tant de pusher :)
+```git push -u origin master```
 
 ## RECUPERER LES DONNEES EN LOCAL DE GITHUB
 Git pull does a git fetch followed by a git merge
