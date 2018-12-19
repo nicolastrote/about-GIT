@@ -1,4 +1,4 @@
-# GIT et GITHUB
+# About GIT, GITHUB & GITLAB
 Notes personnelles pour utiliser Git, GitHub et GitLab
 
 ## INSTALLATION
