@@ -117,7 +117,7 @@ Exemple d'un travail réalisé sur "develop" au-lieu de "branch34"
   * commit ton travail develop en étant sur ta branch develop locale ```git commit -am "mon commit"```
   * créer sur le remote la branche "branch34"
   * realise un ```git fetch```, puis un ```git checkout branch34```
-  * maintenant on recupère ton travail de develop sur branch34 avec un merge : ```git merge develop````
+  * maintenant on recupère ton travail de develop sur branch34 avec un merge : ```git merge develop```
   * tu peux maintenant pousser ta branche locale "branch34" sur la branch remote "branch34": ```git push``` 
  
 # TRAVAILLER AVEC GITHUB
