@@ -72,7 +72,7 @@ $ git checkout master
  
  * Si un fichier ne suit pas les règles locales, car sur le projet il est suivi il faut re-initier les règles locales avec la commande :
  ```
-  $ git rm --cached docker-compose.yml
+  $ git rm -r --cached *lock.json
  ```
 ## ALIAS
 
