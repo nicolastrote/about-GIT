@@ -110,7 +110,25 @@ $ git checkout master
  ```
   $ git config --global alias.st 'status'
  ```
- 
+## REBASE TES COMMITS !
+  * git commit -am "le travail en cours"     
+  * git push   // le travail en cours
+  * git fetch   // recupère bien ce qui est en remote
+  * git log    
+    dans le log on cherche la clé du commit qui précède tous tes commits, la base avant tes modifications
+  * git reset --soft 942837494792834792837492834792  (la clé du commit)
+  * relancer les tests pour s'assurer que tout va bien, sinon ajoute les modications
+  * git commit -am "le travail rebasé"
+  * git push -f
+  * git fetch
+  
+A ce stade aller dans bitbucket dans l'onglet COMMITS. Si ton commit est bien à la base de develop, alors le travail est fini, si c'est pas le cas : 
+  * git rebase origin/develop
+  resoudre les conflits, sans faire de commits
+  * git add   les nouveaux fichiers si nécessaire
+  * git rebase --continue
+  * git push -f origin ta_branch_de_travail
+  
 ## TU T ES TROMPÉ DE BRANCH POUR TRAVAILLER ?
 
 Exemple d'un travail réalisé sur "develop" au-lieu de "branch34"
