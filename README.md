@@ -138,6 +138,11 @@ Exemple d'un travail réalisé sur "develop" au-lieu de "branch34"
   * maintenant on recupère ton travail de develop sur branch34 avec un merge : ```git merge develop```
   * tu peux maintenant pousser ta branche locale "branch34" sur la branch remote "branch34": ```git push``` 
  
+## REVERT LAST COMMIT BUT KEEP CHANGES
+```
+$ git reset --soft HEAD~1
+```
+ 
 # TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
 Avec l'icon "+" créer un répertoire au même nom que votre projet (ie: conkyForGnome3 )
