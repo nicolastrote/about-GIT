@@ -137,6 +137,22 @@ Exemple d'un travail réalisé sur "develop" au-lieu de "branch34"
   * realise un ```git fetch```, puis un ```git checkout branch34```
   * maintenant on recupère ton travail de develop sur branch34 avec un merge : ```git merge develop```
   * tu peux maintenant pousser ta branche locale "branch34" sur la branch remote "branch34": ```git push``` 
+  
+## TOUT SUR STASH
+
+```git stash save "my_stash"```
+where "my_stash" is the stash name...
+
+```git stash list```
+This will list down all your stashes.
+
+To apply a stash and remove it from the stash stack, You can give,
+
+```git stash pop stash@{n}```
+To apply a stash and keep it in the stash stack, type:
+
+```git stash apply stash@{n}```
+Where n in the index of the stashed change.
  
 ## REVERT LAST COMMIT BUT KEEP CHANGES
 ```
