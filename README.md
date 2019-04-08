@@ -111,16 +111,23 @@ $ git checkout master
   $ git config --global alias.st 'status'
  ```
 ## REBASE TES COMMITS !
-  * git commit -am "le travail en cours"     
-  * git push   // le travail en cours
-  * git fetch   // recupère bien ce qui est en remote
-  * git log    
+
+Pour travailler dans ce mode de travail, qui n'est de pousser qu'un seul commit, il faut à chaque pull de dev faire un rebase: 
+  * `git pull --rebase`
+ou intégrer dans la config de git
+  * `git config --global pull.rebase true`
+
+A la fin de votre travail, avant de pousser le code pour une PR, voici la démarche:
+  * `git commit -am "le travail en cours"`   
+  * `git push`   // le travail en cours
+  * `git fetch`   // recupère bien ce qui est en remote
+  * `git log`    
     dans le log on cherche la clé du commit qui précède tous tes commits, la base avant tes modifications
-  * git reset --soft 942837494792834792837492834792  (la clé du commit)
+  * `git reset --soft 942837494792834792837492834792`  (la clé du commit)
   * relancer les tests pour s'assurer que tout va bien, sinon ajoute les modications
-  * git commit -am "le travail rebasé"
-  * git push -f
-  * git fetch
+  * `git commit -am "le travail rebasé"`
+  * `git push -f`
+  * `git fetch`
   
 A ce stade aller dans bitbucket dans l'onglet COMMITS. Si ton commit est bien à la base de develop, alors le travail est fini, si c'est pas le cas : 
   * git rebase origin/develop
