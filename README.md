@@ -110,6 +110,14 @@ $ git checkout master
  ```
   $ git config --global alias.st 'status'
  ```
+ 
+## REALISER UNE TASK A PARTIR D UNE BRANCHE EN COURS DE DEVELOPPEMENT
+  * créer sa branche task et faire son checkout dessus
+  * git fetch
+  * `git reset --hard origin/[nom de la branche en cours de developpement]`
+  * `git push -f`   pour avoir la meme branche
+Ainsi à la fin du développement, la branche en cours pourra faire le cherry-pick du travail effectué dans la tache.
+
 ## REBASE TES COMMITS !
 
 Pour travailler dans ce mode de travail, qui n'est de pousser qu'un seul commit, il faut à chaque pull de dev faire un rebase: 
