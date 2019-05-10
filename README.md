@@ -30,6 +30,13 @@ Once you've done this, you can check and see if it worked:
 $ git
 ```
 
+## CREER SA BRANCHE DEPUIS GIT
+```
+$ git checkout develop   // si le code de base de la branche d'origine est develop
+$ git checkout -b feature/AUD-123-mon-nom   // creation de la branche en local avec develop en code de base
+$ git push origin feature/AUD-123-mon-nom   // creation de la branche sur remote
+```
+
 ## RÉALISER UN COMMIT
 ```
 $ git init
@@ -67,6 +74,7 @@ revenir sur le dernier commit de la branche principale
 ```
 $ git checkout master
 ```
+
 ## GITIGNORE
  * créer un fichier .gitignore avec le nom des fichiers ou dossiers à ne pas suivre
  
@@ -74,6 +82,7 @@ $ git checkout master
  ```
   $ git rm -r --cached *lock.json
  ```
+ 
 ## ALIAS
 
  * créer un fichier .gitconfig dans votre user (pour l'utiliser sur tous les projets)
@@ -118,7 +127,7 @@ $ git checkout master
   * `git push -f`   pour avoir la meme branche
 Ainsi à la fin du développement, la branche en cours pourra faire le cherry-pick du travail effectué dans la tache.
 
-## REBASE TES COMMITS !
+## REBASE TES COMMITS (1iere solution)!
 
 Pour travailler dans ce mode de travail, qui n'est de pousser qu'un seul commit, il faut à chaque pull de dev faire un rebase: 
   * `git pull --rebase`
@@ -138,12 +147,22 @@ A la fin de votre travail, avant de pousser le code pour une PR, voici la démar
   * `git fetch`
   
 A ce stade aller dans bitbucket dans l'onglet COMMITS. Si ton commit est bien à la base de develop, alors le travail est fini, si c'est pas le cas : 
-  * git rebase origin/develop
+  * `git rebase origin/develop`
   resoudre les conflits, sans faire de commits
-  * git add   les nouveaux fichiers si nécessaire
-  * git rebase --continue
-  * git push -f origin ta_branch_de_travail
+  * `git add   les nouveaux fichiers si nécessaire`
+  * `git rebase --continue`
+  * `git push -f origin ta_branch_de_travail`
+
+## REBASE TES COMMITS (2d solution)!
+  * `git rebase origin/develop`  // rebase de la branche pour develop
+  * `git fetch`
+  * `git rebase -i origin/develop`
+  * dans l'éditeur il faut choisir commit par commit les options, en general prendre "pick" pour le 1er commit, puis squash pour les autres.
+  * sortie de l'éditeur VIM avec la commande: `:wq`
   
+## REBASE : si tu es perdu dans ton rebase
+  * 'git rebase --abord'
+
 ## TU T ES TROMPÉ DE BRANCH POUR TRAVAILLER ?
 
 Exemple d'un travail réalisé sur "develop" au-lieu de "branch34"
