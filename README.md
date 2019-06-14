@@ -34,7 +34,7 @@ $ git
 ```
 $ git checkout develop   // si le code de base de la branche d'origine est develop
 $ git checkout -b feature/AUD-123-mon-nom   // creation de la branche en local avec develop en code de base
-$ git push origin feature/AUD-123-mon-nom   // creation de la branche sur remote
+$ git push --set-upstream origin feature/AUD-123-mon-nom   // creation de la branche sur remote
 ```
 
 ## RÉALISER UN COMMIT
