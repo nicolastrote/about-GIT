@@ -62,6 +62,13 @@ Connaitre toutes les modifications :
 $ git log
 ```
 
+## RESTORER UNE ANCIENNE VERSION DU PROJET
+```
+$ git checkout develop
+$ git pull
+$ git reset --hard 0ad5a7a6 (numero du commit mergé dans develop)
+```
+
 ## SE POSITIONNER SUR UN COMMIT DONNE'
 ```
 $ git log
