@@ -84,9 +84,12 @@ $ git checkout master
 
 ## GITIGNORE
  * créer un fichier .gitignore avec le nom des fichiers ou dossiers à ne pas suivre
- `$ touch .gitignore`
- `$ nano .gitignore` and add rules like 
- ```
+```
+$ touch .gitignore
+$ nano .gitignore
+```
+and add rules like 
+```
  # ide
 .idea
 
