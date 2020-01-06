@@ -84,10 +84,39 @@ $ git checkout master
 
 ## GITIGNORE
  * créer un fichier .gitignore avec le nom des fichiers ou dossiers à ne pas suivre
+ `$ touch .gitignore`
+ `$ nano .gitignore` and add rules like 
+ ```
+ # ide
+.idea
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+```
  
  * Si un fichier ne suit pas les règles locales, car sur le projet il est suivi il faut re-initier les règles locales avec la commande :
  ```
-  $ git rm -r --cached *lock.json
+  $ git rm -r --cached .
+  $ git config --global core.excludesFile ~/.gitignore
  ```
  
 ## ALIAS
