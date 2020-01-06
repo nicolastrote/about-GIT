@@ -85,7 +85,7 @@ $ git checkout master
 ## GITIGNORE
  * créer un fichier .gitignore avec le nom des fichiers ou dossiers à ne pas suivre
 ```
-$ touch .gitignore
+$ touch .gitignore && $ git config --global core.excludesFile ~/.gitignore
 $ nano .gitignore
 ```
 and add rules like 
@@ -119,8 +119,8 @@ yarn-error.log*
  * Si un fichier ne suit pas les règles locales, car sur le projet il est suivi il faut re-initier les règles locales avec la commande :
  ```
   $ git rm -r --cached .
-  $ git config --global core.excludesFile ~/.gitignore
  ```
+ and commit if needed
  
 ## ALIAS
 
