@@ -292,15 +292,21 @@ Sur la page du projet Open Source
 
 Sur la page de ton Github
 * appuyer sur le bouton _Clone_ et copier le lien
-```cd ~/Workspace && git clone https://github.com/nicolastrote/react-hook-form-website.git```
+```
+cd ~/Workspace && git clone https://github.com/nicolastrote/react-hook-form-website.git
+```
 * créer une branche de travail
-```git checkout -b "ma-branche-de-travail"```
+```
+git checkout -b "ma-branche-de-travail"
+```
 * le travail terminé, tu commit et push les changements
-```git commit -am "voici mon super travail" && git push```
+```
+git commit -am "voici mon super travail" && git push
+```
 * puis sur la page du repo de ton github, tu verras un bouton pour envoyer un Pull Request vers le repo du projet Open Source.
 
 ### Comment synchroniser son fork avec le projet Open Source
-* cd ~/Workspace/react-hook-form-website
+* `cd ~/Workspace/react-hook-form-website`
 Pour savoir sur quel remote le repo récupère ses données :
 ```
 git checkout master && git remote -v
@@ -326,7 +332,9 @@ git fetch upstream
 * [new branch]      master     -> upstream/master
 ```
 Les changements ont été enregistrer dans une branche nommée "upstream/master" il faut donc la merger dans Master :
-```git push origin upstream/master```
+```
+git push origin upstream/master
+```
 Vérification:
 ```
 git status
