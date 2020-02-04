@@ -285,6 +285,57 @@ $ git fetch
 $ history -c
 ```
 
+## PARTICIPER A UN PROJET OPEN SOURCE SOUS GITHUB
+### Mécanisme de Fork et PR
+Sur la page du projet Open Source
+* appuyer sur le bouton _FORK_
+
+Sur la page de ton Github
+* appuyer sur le bouton _Clone_ et copier le lien
+```cd ~/Workspace && git clone https://github.com/nicolastrote/react-hook-form-website.git```
+* créer une branche de travail
+```git checkout -b "ma-branche-de-travail"```
+* le travail terminé, tu commit et push les changements
+```git commit -am "voici mon super travail" && git push```
+* puis sur la page du repo de ton github, tu verras un bouton pour envoyer un Pull Request vers le repo du projet Open Source.
+
+### Comment synchroniser son fork avec le projet Open Source
+* cd ~/Workspace/react-hook-form-website
+Pour savoir sur quel remote le repo récupère ses données :
+```
+git checkout master && git remote -v
+origin	https://github.com/nicolastrote/react-hook-form-website.git (fetch)
+origin	https://github.com/nicolastrote/react-hook-form-website.git (push)
+```
+Actuellement il est sync avec mon repo, il faut ajouter un repo "upstream" pour récupérer les differences depuis le repo original
+```
+git remote add upstream https://github.com/react-hook-form/react-hook-form-website
+```
+Vérification
+```
+git remote -v
+origin	https://github.com/nicolastrote/react-hook-form-website.git (fetch)
+origin	https://github.com/nicolastrote/react-hook-form-website.git (push)
+upstream	https://github.com/react-hook-form/react-hook-form-website (fetch)
+upstream	https://github.com/react-hook-form/react-hook-form-website (push)
+```
+Maintenant on peut récupérer les changements depuis le repo "upstream" avec :
+```
+git fetch upstream
+[...]
+* [new branch]      master     -> upstream/master
+```
+Les changements ont été enregistrer dans une branche nommée "upstream/master" il faut donc la merger dans Master :
+```git push origin upstream/master```
+Vérification:
+```
+git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
 # TRAVAILLER AVEC GITLAB
 Aller sur https://gitlab.com, se créer un compte (https://gitlab.com/nicolastrote), enregistrer sa clef publique SSH.
 
