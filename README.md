@@ -231,6 +231,9 @@ Where n in the index of the stashed change.
 ```
 $ git reset --soft HEAD~1
 ```
+
+## VOIR LES BRANCHES GRAPHIQUEMENT
+git log --oneline --graph --color
  
 # TRAVAILLER AVEC GITHUB
 Aller sur https://github.com, se créer un compte, noter le USER (nicolastrote) et votre MOTDEPASSE
