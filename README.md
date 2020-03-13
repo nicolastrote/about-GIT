@@ -30,9 +30,9 @@ Once you've done this, you can check and see if it worked:
 $ git
 ```
 
-## CREER SA BRANCHE DEPUIS GIT
+## CREER UNE BRANCHE DEPUIS DEVELOP
 ```
-$ git checkout develop   // si le code de base de la branche d'origine est develop
+$ git checkout develop && git fetch && git pull  // si le code de base de la branche d'origine est develop
 $ git checkout -b feature/AUD-123-mon-nom   // creation de la branche en local avec develop en code de base
 $ git push --set-upstream origin feature/AUD-123-mon-nom   // creation de la branche sur remote
 ```
@@ -231,7 +231,14 @@ Where n in the index of the stashed change.
 ```
 $ git reset --soft HEAD~1
 ```
-
+## REVERT A FILE
+```
+$ git checkout filename
+```
+To revert this command:
+```
+git checkout -- filename
+```
 ## VOIR LES BRANCHES GRAPHIQUEMENT
 git log --oneline --graph --color
  
