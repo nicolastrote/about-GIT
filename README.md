@@ -69,6 +69,15 @@ $ git pull
 $ git reset --hard 0ad5a7a6 (numero du commit mergé dans develop)
 ```
 
+## RESTORER UN SEUL FICHIER (rollback)
+```
+git checkout filename
+```
+Si dans la branche il y a le meme fichier alors
+```
+git checkout -- filename
+```
+
 ## SE POSITIONNER SUR UN COMMIT DONNE'
 ```
 $ git log
