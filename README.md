@@ -20,6 +20,10 @@ The next step is to take the newly generated SSH key and add it to your Github a
 ```
 $ cat ~/.ssh/id_rsa.pub
 ```
+or 
+```
+$ pbcopy < ~/.ssh/id_rsa.pub
+```
 Copy the key and paste it on github:https://github.com/settings/keys
 Et tel un hero vous pouvez faire une vérification de connexion ssh :
 ```
