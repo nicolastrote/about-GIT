@@ -290,6 +290,11 @@ Cette méthode permet de pousser un projet complet sur GitHub.
 * Il est tant de pusher :)
 ```git push -u origin master```
 
+## Git demande toujours mon authentification
+* ajouter la clef publique ssh dans git
+* ajouter le lien avec set-url : 
+```git remote set-url origin git@github.com:nicolastrote/eslint-config-tron.git```
+
 ## RECUPERER LES DONNEES EN LOCAL DE GITHUB
 Git pull does a git fetch followed by a git merge
 ```
