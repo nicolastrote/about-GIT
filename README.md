@@ -392,5 +392,15 @@ $ git push origin nom_de_la_branche_uniquement
 ```
 Le git merge sera fait sur GitLab qui permet de voir les differences, rajouter des codes reviewers, des imprim-ecrans...
 
+
+# PUBLISH PACKAGE ON NPM
+
+```$ npm login```
+login: nicolastrote
+mail: nicolas.trote@gmail.com
+pass: j.....
+
+```$ npm publish```
+
 # CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
