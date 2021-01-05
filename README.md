@@ -402,5 +402,18 @@ pass: j.....
 
 ```$ npm publish```
 
+
+# AUDIT AND SOLVE VERSION
+
+`npm i -g npm-check`
+* Audit avec selection :
+`npm-check -u`
+* Audit avec résolution :
+`npm-check -y`
+
+* Juste pour une audit et résolution à la main :
+`npm audit fix`
+
+
 # CHEAT SHEET
 ![cheatsheet](https://github.com/nicolastrote/tuto_github/blob/master/Git-Cheat-Sheet.png)
