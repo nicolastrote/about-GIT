@@ -81,6 +81,10 @@ Si dans la branche il y a le meme fichier alors
 ```
 git checkout -- filename
 ```
+## FORCE GIT TO RECOGNIZE FILE & FOLDER MAJ RENAMING
+```
+$ git config core.ignorecase false
+```
 
 ## SE POSITIONNER SUR UN COMMIT DONNE'
 ```
