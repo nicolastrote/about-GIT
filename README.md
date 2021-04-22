@@ -85,6 +85,9 @@ git checkout -- filename
 ```
 $ git config core.ignorecase false
 ```
+For renaming from app.tsx to App.tsx for example : 
+DON'T : `git mv app.tsx App.tsx`
+DO : `git mv app.tsx tmp.tsx && git mv tmp.tsx App.tsx`
 
 ## SE POSITIONNER SUR UN COMMIT DONNE'
 ```
