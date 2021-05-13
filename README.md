@@ -340,6 +340,12 @@ git commit -am "voici mon super travail" && git push
 ```
 * puis sur la page du repo de ton github, tu verras un bouton pour envoyer un Pull Request vers le repo du projet Open Source.
 
+### Revert un commit
+Cette solution est utile lorsque l'on ne peut pas utiliser git reset:
+```
+git revert --no-commit 048A19v81994bh2acec2bfd7f0406da68823f8f8 -m 1
+```
+
 ### Comment synchroniser son fork avec le projet Open Source
 * `cd ~/Workspace/react-hook-form-website`
 Pour savoir sur quel remote le repo récupère ses données :
