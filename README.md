@@ -186,6 +186,18 @@ yarn-error.log*
   * `git push -f`   pour avoir la meme branche
 Ainsi à la fin du développement, la branche en cours pourra faire le cherry-pick du travail effectué dans la tache.
 
+## SUPPRIMER UN COMMITS
+
+  * créer sa branche de travail pour précaution
+  * git rebase -i <numero de commit à supprimer>~1
+  * supprimer pick et mettre d (ou drop) devant le commit à supprimer
+  * sauvegarder avec `:x`
+  * si il y a des conflits:
+    * régler les conflits comme une PR
+    * faire ADD sur les fichiers en conflits
+    * git rebase --continue
+  * refaire ces 3 actions dernieres actions jusqu'à résolution
+
 ## REBASE TES COMMITS (1iere solution)!
 
 Pour travailler dans ce mode de travail, qui n'est de pousser qu'un seul commit, il faut à chaque pull de dev faire un rebase: 
